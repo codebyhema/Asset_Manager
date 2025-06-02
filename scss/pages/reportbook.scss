@@ -1,0 +1,339 @@
+@use "../visualization/table";
+@use "../visualization/piechart";
+@use "../visualization/barchart";
+@use "../visualization/networth";
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .head {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding-right: 30px;
+
+    #add-widgets {
+      display: block;
+      text-align: center;
+      height: 40px;
+      padding: 0 25px;
+      background-color: var(--button-color);
+      color: black;
+      font-size: 15px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+    #save-report {
+      display: block;
+      text-align: center;
+      height: 40px;
+      padding: 0 25px;
+      background-color: var(--button-color);
+      color: black;
+      font-size: 15px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+  }
+  .report {
+    height: 90%;
+    padding-top: 20px;
+    overflow: visible;
+
+    #box-container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 21px;
+      flex: 1;
+      padding: 0 20px;
+      box-sizing: border-box;
+      height: 100%; /* Set a max-height to allow scrolling */
+      overflow-y: auto; /* Enables vertical scrolling */
+
+      /* Custom scrollbar styles */
+      &::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+      }
+      &::-webkit-scrollbar-track {
+        background: var(--header-color); /* Light background for the track */
+        border-radius: 10px; /* Rounded edges */
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--sidebar-color); /* Darker thumb color */
+        border-radius: 10px; /* Rounded edges */
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #888; /* Darker on hover */
+      }
+    }
+
+    .box {
+      position: relative;
+      background-color: var(--box-color);
+      height: 300px;
+      width: 49%;
+      margin-bottom: 10px;
+      border-radius: 7px;
+      box-sizing: border-box;
+      border: 2px solid var(--box-border);
+      overflow: hidden;
+
+      /* Cross Button Style */
+      .close-btn {
+        position: absolute;
+        top: 3px;
+        right: 12px;
+        color: gray;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        padding-bottom: 25px;
+        z-index: 10;
+      }
+      // filter button and dropdown styled
+
+      .filter-dropdown {
+        position: relative;
+        z-index: 10;
+
+        .filter-btn {
+          top: 5px;
+          right: 40px;
+          position: absolute;
+          border: none;
+          padding: 5px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+
+        .filterBox {
+          display: none;
+          position: absolute;
+          top: 30px; /* Adjust this to align dropdown below button */
+          right: 40px; /* Adjust this to align dropdown horizontally with button */
+          background-color: white;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 50%;
+          height: 250px; /* Limit height */
+          z-index: 1000;
+          overflow-y: auto; /* Enable scroll */
+
+          /* Custom scrollbar styles */
+          &::-webkit-scrollbar {
+            width: 5px; /* Width of the scrollbar */
+          }
+          &::-webkit-scrollbar-track {
+            background: var(
+              --header-color
+            ); /* Light background for the track */
+            border-radius: 10px; /* Rounded edges */
+          }
+          &::-webkit-scrollbar-thumb {
+            background: var(--sidebar-color); /* Darker thumb color */
+            border-radius: 10px; /* Rounded edges */
+          }
+          &::-webkit-scrollbar-thumb:hover {
+            background: #888; /* Darker on hover */
+          }
+
+          .filter-options.show {
+            display: block;
+            animation: fadeIn 0.3s ease-out; /* Smooth dropdown */
+          }
+
+          li {
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background-color 0.2s ease; /* Smooth hover effect */
+
+            &:hover {
+              background-color: #f1f1f1;
+            }
+          }
+          h4 {
+            text-align: center;
+            font-size: 15px;
+            color: #888;
+            padding: 5px 12px;
+            margin: 10px 0px 12px 0px;
+          }
+          form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+
+            .table {
+              display: none;
+            }
+            .pie {
+              display: none;
+            }
+            .Bar {
+              display: none;
+            }
+            .net {
+              display: none;
+            }
+            .filter-submit {
+              display: none;
+              height: 30px;
+              width: 70px;
+              color: black;
+              font-size: 16px;
+              cursor: pointer;
+              background-color: var(--button-color);
+              border: none;
+              border-radius: 7px;
+              margin: 35px 0px 30px 0px;
+            }
+
+            .checkbox-menu {
+              background: rgb(39 197 245 / 16%);
+              border-radius: 10px;
+              padding: 1px 0px 1px 0px;
+              margin-top: 5px;
+              label {
+                display: flex;
+                margin: 11px;
+                cursor: pointer;
+              }
+              input {
+                width: 12px;
+                margin-right: 8px;
+              }
+            }
+
+            .dropdown {
+              width: 85%;
+              margin-top: 25px;
+
+              .chartType,
+              .assetType,
+              .columnType,
+              .checkbox-btn {
+                width: 100%;
+                border-radius: 10px;
+                background: rgb(39 197 245 / 16%);
+                border: 8px solid #27c5f500;
+                cursor: pointer;
+                outline: none;
+              }
+            }
+            .checkbox-btn {
+              position: relative;
+              text-align: left;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 6px;
+                right: 7px;
+                height: 4px;
+                width: 5.49px;
+                border: solid black;
+                border-width: 2.5px 2.5px 0 0;
+                transform: rotate(138deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    // Table Styles
+  }
+  h1 {
+    font-size: 15px;
+    color: var(--sidebar-color);
+    padding: 7px 12px;
+  }
+  h2 {
+    font-size: 11px;
+    color: rgba(136, 136, 136, 0.856);
+    padding: 0px 12px;
+    margin-bottom: 12px;
+  }
+  #download-pdf {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: black;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+}
+
+// print code
+
+@media print {
+  @page {
+    margin: 0;
+    size: Letter;
+  }
+  header {
+    display: none !important;
+  }
+  main > aside {
+    display: none;
+  }
+  #add-widgets,
+  #save-report {
+    display: none !important;
+  }
+  .head {
+    height: 0 !important;
+  }
+  #box-container {
+    height: auto !important;
+    gap: 0 !important;
+  }
+  main {
+    background-color: #fff !important;
+  }
+  .report {
+    padding-top: 0 !important;
+  }
+  .close-btn,
+  .filter-btn {
+    display: none;
+  }
+  .box {
+    width: 100% !important;
+    height: 490px !important;
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+    page-break-inside: avoid !important;
+    border: none !important;
+    box-shadow: 0 0 0.8px 1px rgb(49, 49, 49);
+  }
+  .box:nth-of-type(3) {
+    page-break-before: always;
+  }
+  .pie-container figure {
+    margin-top: 100px !important;
+  }
+  .pie-container figure .detail-info::after {
+    background: none;
+  }
+  .bar-container .barchart {
+    top: 100px !important;
+  }
+  .networth-container .net-content h1 {
+    padding-top: 200px !important;
+  }
+}

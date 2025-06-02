@@ -1,0 +1,61 @@
+// Table Styles
+.table-wrapper {
+  // display: none;
+  .table-container {
+    width: 100%; /* Full width of the parent container */
+    height: 236px; /* Set height for scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 5px;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--sidebar-color);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #888;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 12px;
+      width: max-content; /* Allows table to grow horizontally */
+      min-width: 100%; /* Ensures table fills container width */
+
+      th,
+      td {
+        padding: 2px 5px;
+        text-align: right;
+        border-bottom: 1.5px solid rgb(141, 141, 141);
+        color: var(--span-txt);
+      }
+
+      td:first-child {
+        width: max-content;
+        padding-right: 65px;
+        text-align: left;
+        text-shadow: 0 0.1px 0.6px BLACK;
+        color: var(--span-txt);
+        font: 11px lato !important;
+        border-right: 1px solid #00000012;
+      }
+
+      tr:hover {
+        background-color: var(--hover);
+      }
+
+      th {
+        font-weight: bold;
+      }
+    }
+  }
+}

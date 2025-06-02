@@ -1,0 +1,76 @@
+header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  box-shadow: 0px -14px 13px 8px #000;
+  background-color: var(--header-color);
+  border-bottom: 1px solid #494949;
+
+  //this is the 1/3rd part of fthe header for logo
+  aside {
+    height: 55px;
+    min-width: 210px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+
+    .text-asset {
+      color: #458bc4;
+      font-size: 24px;
+
+      small {
+        color: var(--text-color);
+        font-size: 18px;
+      }
+    }
+  }
+  //this is used for other par of the header which takes header clicks
+  .headerContainer {
+    width: calc(100% - 210px);
+    height: 55px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    //round profile photo and initials
+    .profile-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ccc;
+      overflow: hidden; /* Ensures the image stays within the circle */
+      cursor: pointer;
+      margin-right: 30px;
+
+      img {
+        width: 100%; /* Makes the image fill the circle */
+        height: 100%; /* Ensures no stretching issues */
+        object-fit: cover; /* Maintains aspect ratio within the circle */
+      }
+    }
+
+    //this to design the notification bell
+    .n-bell {
+      cursor: pointer;
+      margin-right: 30px;
+    }
+
+    // we can toggle the classlist with light theme and toggle for dark and light theme
+    .toggle {
+      // position: absolute;
+      // right: 140px;
+      // top: 50%;
+      // transform: translateY(-50%);
+      cursor: pointer;
+      margin-right: 30px;
+
+      // img {
+      //   transform: scaleX(1.1);
+      // }
+    }
+  }
+}

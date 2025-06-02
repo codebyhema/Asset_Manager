@@ -1,0 +1,265 @@
+main {
+  position: relative;
+  display: flex;
+  flex: 1;
+
+  .content {
+    width: calc(100% - 210px);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto; /* Enables vertical scrolling */
+
+    /* Custom scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 8px; /* Width of the scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--header-color); /* Light background for the track */
+      border-radius: 10px; /* Rounded edges */
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--sidebar-color); /* Darker thumb color */
+      border-radius: 10px; /* Rounded edges */
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #888; /* Darker on hover */
+    }
+  }
+
+  .head {
+    color: var(--text-color);
+    width: calc(100% - 345px);
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px 0px 0px 10px;
+    justify-content: center;
+    font-size: 13px;
+    .acc {
+      span {
+        margin-left: 5px;
+      }
+    }
+    .greetings {
+      font-size: 30px;
+      margin-left: 35px;
+    }
+  }
+  .profile-img-btn {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0px 0px 35px;
+    width: 251px;
+    height: 319px;
+    background: var(--sidebar-color);
+    padding: 47px;
+    border-radius: 22px;
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: gray;
+      cursor: pointer;
+      margin-bottom: 30px;
+
+      .profile-photo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #458bc4;
+      }
+    }
+
+    .upload-label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: #458bc4;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #458bc475;
+      }
+    }
+  }
+
+  .user-info {
+    width: calc(100% - 345px);
+  }
+  .button {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+
+    button {
+      background-color: var(--profile-color);
+      color: var(--text-color);
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 137px;
+
+      span {
+        margin-left: 3px;
+      }
+    }
+  }
+  // Input Group: Styles for input fields and related elements
+  .input-group {
+    position: relative;
+    background-color: var(--sidebar-color);
+    margin: 50px 0px 0px 35px;
+    width: 70%;
+    border-radius: 10px;
+
+    .large-field {
+      resize: none; /* Disable the resize handle */
+      overflow: hidden; /* Hide the scrollbar but still allow scrolling */
+    }
+    // Text label above the input field
+    label {
+      color: var(--text-color);
+      font-size: 16px;
+      display: block;
+      position: absolute;
+      top: -22px;
+      left: 8px;
+      pointer-events: none;
+    }
+
+    // Input Field: General styles for all input elements
+    .input-field {
+      width: calc(100% - 20px);
+      padding: 8px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      background: transparent;
+      color: #757575;
+    }
+  }
+  .plan-group {
+    position: relative;
+    background-color: var(--profile-color);
+    border-radius: 10px;
+    margin: 50px 0px 0px 35px;
+    width: 19%;
+
+    .user {
+      color: var(--text-color);
+      font-size: 16px;
+      display: block;
+      position: absolute;
+      top: -22px;
+      left: 8px;
+      pointer-events: none;
+    }
+    .current-plan {
+      width: calc(100% - 20px);
+      padding: 8px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      color: var(--text-color);
+    }
+    .expiry-date {
+      position: absolute;
+      bottom: -45%;
+      left: 5%;
+      color: var(--text-color);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    .upgrade-btn {
+      position: absolute;
+      top: 3px;
+      right: -100px;
+      padding: 6px 20px;
+      background-color: var(--button-color);
+      color: #000;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      border: none;
+    }
+  }
+  .dropdown {
+    .more-details {
+      width: 130px;
+      height: 30px;
+      background-color: var(--profile-color);
+      border-radius: 10px;
+      border: none;
+      color: var(--text-color);
+      margin: 40px 0px 0px 35px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none; /* Hidden by default */
+      height: 530px;
+      transition: all 0.3s ease-in-out;
+
+      .detail-button {
+        padding: 10px 20px;
+        color: #000;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--button-color);
+        font-size: 16px;
+        width: 16%;
+        margin: 35px 0px 0px 35px;
+        cursor: pointer;
+        text-align: center;
+        text-shadow: 0.9px 0.49px 0.5px gray;
+        text-decoration: none;
+      }
+
+      .gender-selection {
+        margin: 35px 0px 0px 35px;
+        font-size: 16px; /* Adjust font size */
+
+        .options {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
+      .gender-selection label {
+        padding: 0px 0px 0px 5px;
+        color: var(--text-color);
+        cursor: pointer;
+      }
+
+      .gender-selection div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 0px 0px 0px; /* Add spacing between options */
+      }
+
+      .gender-selection input[type="radio"] {
+        padding-right: 5px; /* Add spacing between radio button and text */
+        width: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

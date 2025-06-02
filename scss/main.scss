@@ -1,0 +1,70 @@
+@use "abstract/_font";
+@use "base/_reset";
+@use "layout/header";
+@use "layout/sidebar";
+
+* {
+  font-family: lato;
+}
+:root {
+  --header-color: #1a1a1a;
+  --sidebar-color: #323d41;
+  --main-color: #1a1a1a;
+  --text-color: white;
+  --box-color: white;
+  --button-color: #f5b027;
+  --hover-color: #272727;
+  --box-border: gray;
+  --profile-color: #6b6f70;
+  --option-color: white;
+  --c1: #dd6e42;
+  --c2: #f78d50;
+  --c3: #f5c451;
+  --c4: #9bbb59;
+  --c5: #5f9a7f;
+  --c6: #3c7d66;
+  --c7: #4a8c8c;
+  --c8: #7fb4ff;
+  --c9: #798497;
+  --c10: #c99b74;
+  --c11: #b36b84;
+  --c12: #87606d;
+  --shadow-color: #ffffff00, #fff;
+  --pie: white;
+  --span-txt: black;
+  --hover: #f1f1f1;
+}
+.light-theme {
+  --header-color: rgb(233, 231, 231);
+  --sidebar-color: rgb(233, 231, 231);
+  --main-color: rgba(211, 206, 206, 0.993);
+  --pie: rgb(191 191 191 / 0%);
+  --text-color: black;
+  --button-color: #f5b027;
+  --box-color: rgb(75 75 75);
+  --hover-color: #d3d3d3;
+  --box-border: rgb(63 60 60 / 89%);
+  --option-color: #a1a1a1;
+  --shadow-color: rgba(255, 255, 255, 0), rgb(75 75 75);
+  --span-txt: white;
+  --hover: #f1f1f140;
+  --profile-color: #6b6f7073;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  height: calc(100% - 56px);
+  width: 100%;
+  background-color: var(--main-color);
+  display: flex;
+
+  .content {
+    width: calc(100% - 210px);
+    flex: 1;
+  }
+}

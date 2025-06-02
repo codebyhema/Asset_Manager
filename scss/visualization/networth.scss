@@ -1,0 +1,12 @@
+.networth-container {
+  position: relative;
+  #value {
+    // font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #b9aaaa52;
+  }
+}

@@ -1,0 +1,279 @@
+.content {
+  .toast {
+    position: fixed;
+    top: 40px;
+    right: 85px;
+    background-color: #f5b027ba;
+    color: black;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    z-index: 9999;
+  }
+
+  .toast.show {
+    opacity: 1;
+    top: 40px;
+  }
+
+  .head {
+    width: 65%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    border-bottom: 1px solid #494949;
+    .button {
+      height: 55px;
+      width: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover,
+      :active,
+      :focus {
+        color: #458bc4;
+        border-bottom: 3px solid rgb(69, 139, 196);
+        text-shadow: rgb(69, 139, 196) 0px 0px 1px;
+      }
+    }
+  }
+  .add-assets {
+    display: none;
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .add {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+        .type,
+        .name,
+        .value {
+          width: 85%;
+          position: relative;
+
+          .input-group {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background: var(--sidebar-color);
+            border: 8px solid var(--sidebar-color);
+            margin-top: 70px;
+            outline: none;
+          }
+
+          label {
+            color: var(--text-color);
+            font-size: 14px;
+            display: block;
+            position: absolute;
+            top: 47px;
+            left: 8px;
+            pointer-events: none;
+            width: 100%;
+          }
+        }
+
+        input {
+          color: #fff; /* Text color (white) */
+          caret-color: #fff; /* Cursor color (white) */
+          &::placeholder {
+            color: #a1a1a1;
+          }
+          &:not([type="submit"]):valid {
+            color: var(--text-color);
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+
+        select {
+          color: #a1a1a1;
+          cursor: pointer;
+
+          &:valid {
+            color: var(--text-color);
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+        option {
+          color: var(--option-color);
+          &:disabled {
+            color: #a1a1a1;
+          }
+        }
+
+        .submit-button {
+          height: 40px;
+          width: 140px;
+          color: var(--text-color);
+          font-size: 16px;
+          cursor: pointer;
+          background-color: var(--button-color);
+          border: none;
+          border-radius: 7px;
+          margin-top: 48px;
+        }
+      }
+    }
+  }
+  .update-assets {
+    display: none;
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .update {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+        .type,
+        .name,
+        .value {
+          width: 85%;
+          position: relative;
+
+          .input-group {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background: var(--sidebar-color);
+            border: 8px solid var(--sidebar-color);
+            margin-top: 70px;
+            outline: none;
+          }
+          label {
+            color: var(--text-color);
+            font-size: 14px;
+            display: block;
+            position: absolute;
+            top: 47px;
+            left: 8px;
+            pointer-events: none;
+            width: 100%;
+          }
+        }
+
+        input {
+          color: #fff; /* Text color (white) */
+          caret-color: #fff; /* Cursor color (white) */
+          &::placeholder {
+            color: #a1a1a1;
+          }
+          &:not([type="submit"]):valid {
+            color: var(--text-color);
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+
+        select {
+          color: #a1a1a1;
+          cursor: pointer;
+
+          &:valid {
+            color: var(--text-color);
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+        option {
+          color: var(--option-color);
+          &:disabled {
+            color: #a1a1a1;
+          }
+        }
+
+        .submit-button {
+          height: 40px;
+          width: 140px;
+          color: var(--text-color);
+          font-size: 16px;
+          cursor: pointer;
+          background-color: var(--button-color);
+          border: none;
+          border-radius: 7px;
+          margin-top: 48px;
+        }
+      }
+    }
+  }
+  .delete-assets {
+    display: none;
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .delete {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+        .type,
+        .name {
+          width: 85%;
+          position: relative;
+
+          .input-group {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background: var(--sidebar-color);
+            border: 8px solid var(--sidebar-color);
+            cursor: pointer;
+            margin-top: 70px;
+            outline: none;
+          }
+          label {
+            color: var(--text-color);
+            font-size: 14px;
+            display: block;
+            position: absolute;
+            top: 47px;
+            left: 8px;
+            pointer-events: none;
+            width: 100%;
+          }
+        }
+
+        select {
+          color: #a1a1a1;
+
+          &:valid {
+            color: var(--text-color);
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+        option {
+          color: var(--option-color);
+          &:disabled {
+            color: #a1a1a1;
+          }
+        }
+
+        .submit-button {
+          height: 40px;
+          width: 140px;
+          color: var(--text-color);
+          font-size: 16px;
+          cursor: pointer;
+          background-color: var(--button-color);
+          border: none;
+          border-radius: 7px;
+          margin-top: 48px;
+        }
+      }
+    }
+  }
+}

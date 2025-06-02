@@ -1,0 +1,205 @@
+// // Body Section: Styles applied to the entire page
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative; /* Reference for absolutely positioned children */
+  width: 470px; /* Fixed width */
+  height: 545px; /* Fixed height */
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures forms outside the area are hidden */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
+
+  .form-wrapper {
+    position: relative; /* Contain forms inside this wrapper */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      width: calc(100% - 100px);
+    }
+  }
+
+  .login-container,
+  .signup-container {
+    position: absolute; /* Positioned within .wrapper */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .login-container {
+    transform: translateY(0); /* Default position */
+  }
+
+  .signup-container {
+    transform: translateY(100%); /* Hidden by default (off-screen) */
+  }
+
+  &.active {
+    .login-container {
+      transform: translateY(-100%); /* Moves login off-screen */
+    }
+    .signup-container {
+      transform: translateY(0); /* Brings signup into view */
+    }
+  }
+
+  // Header Section: Contains the title and subtitle
+  // Provides styling for the main heading and subheading
+  h1 {
+    text-align: center;
+    color: rgb(69, 139, 196);
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  h2 {
+    text-align: center;
+    color: gray;
+    font-size: 16px;
+    margin-bottom: 25px;
+    font-weight: normal;
+  }
+  // Input Group: Styles for input fields and related elements
+  .input-group {
+    position: relative;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.74);
+    margin-bottom: 40px;
+
+    // Text label above the input field
+    label {
+      color: rgba(0, 0, 0, 0.74);
+      font-size: 16px;
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      pointer-events: none;
+      transition: 0.3s ease-in-out;
+    }
+
+    // Input Field: General styles for all input elements
+    input {
+      width: calc(100% - 20px);
+      padding: 8px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      background: transparent;
+
+      // Focus State: Styling when the input field is active
+      &:focus ~ label,
+      &:not(:placeholder-shown) ~ label {
+        top: -5px;
+        color: white;
+      }
+      // input:invalid ~ label {
+      //   color: red;
+      // }
+    }
+
+    .fa-lock,
+    .fa-lock-open {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .fa-user {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .fa-envelope {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.7;
+    }
+  }
+  // Button: Styles for the primary login button
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--button-color);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    // Checkbox: Custom styling for checkboxes
+    input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      border: 2px solid #000;
+      border-radius: 3px;
+      cursor: pointer;
+      accent-color: #f5b027; // Yellow fill when checked
+      margin-right: 5px;
+    }
+  }
+
+  // Signup Link: Styles for the "Sign Up" link
+  .signup-link {
+    text-align: center;
+    text-decoration: none;
+
+    a {
+      color: blue;
+      text-decoration: none; // Ensures no underline
+
+      &:hover {
+        text-decoration: underline; // Adds underline on hover
+      }
+    }
+  }
+}
