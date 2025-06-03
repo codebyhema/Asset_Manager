@@ -60,23 +60,23 @@ if ($result->num_rows > 0) {
             </div>
             <div class="login">
                 <span>Step 2:<br>Click on 'TRACK' in the sidebar, then fill in the asset details like type,name and value.</span>
-                <img src="img/add_asset.png" alt="track img">
+                <img src="img/add_asset.PNG" alt="track img">
             </div>
             <div class="login">
                 <span>Step 3:<br>Go to the 'REPORTBOOK' section to view your asset distribution in charts.</span>
-                <img src="img/report.png" alt="track img">
+                <img src="img/report.PNG" alt="report img">
             </div>
             <div class="login">
                 <span>Step 4:<br>Edit your name, email, profile photo and other information to keep your account up to date.</span>
-                <img src="img/profile.png" alt="track img">
+                <img src="img/profile.PNG" alt="profile img">
             </div>
             <div class="login">
                 <span>Step 5:<br>Manage your account settings, including theme, notifications, and password preferences for a personalized experience.</span>
-                <img src="img/settings.png" alt="settings img">
+                <img src="img/settings.PNG" alt="settings img">
             </div>  
             <div class="login">
                 <span>Step 6:<br>View your current subscription plan, renewal date, and available offers to stay updated on your membership status.</span>
-                <img src="img/myplan.png" alt="plan img">
+                <img src="img/myplan.PNG" alt="plan img">
             </div>
 
         </div>
