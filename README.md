@@ -2,9 +2,13 @@
 
 Welcome to the **Asset Manager** project — a **subscription-based web app** built to manually track and manage your assets. Users can add, edit, and visualize their assets, generate reports, and personalize their profile — all in one place.
 
+
+
 ### 🌐 Live Web App: [Asset Manager](http://assetmanager.infinityfreeapp.com/)
 
 ---
+
+
 
 ## 🚀 Features
 
@@ -16,21 +20,25 @@ Welcome to the **Asset Manager** project — a **subscription-based web app** bu
 
 ---
 
+
+
 ## 🛠️ Tech Stack Used
 
 **Frontend & Backend:**
 
 <p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SCSS" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50" height="50"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50" style="margin-right: 10px;"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SCSS" width="50" height="50" style="margin-right: 10px;"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50" style="margin-right: 10px;"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50" height="50" style="margin-right: 10px;"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="50" height="50" style="margin-right: 10px;"/>
 </p>
 
 ---
 
-## 📌 Usage Permission
+
+
+## ✍ Usage Permission
 
 This project is open for **viewing only**. You are **not allowed** to reuse, modify, or distribute the code without explicit permission.
 
@@ -38,6 +46,8 @@ This project is open for **viewing only**. You are **not allowed** to reuse, mod
 - 📩 **Contact the repository owner before using the code for any purpose**
 
 ---
+
+
 
 ## 🧭 Quick Guide to Using the App
 
@@ -47,6 +57,8 @@ This project is open for **viewing only**. You are **not allowed** to reuse, mod
 4. Manage themes and preferences in **Settings**.
 
 ---
+
+
 
 ## 🙋 Contact
 
