@@ -5,17 +5,17 @@ Welcome to the **Asset Manager** project — a **subscription-based web app** bu
 ### 🌐 Live Web App  
 🔗 [Asset Manager](http://assetmanager.infinityfreeapp.com/)
 
-<hr style="border: 0.5px solid #ccc;"/>
+<hr style="border: 0.2px  #ccc;"/>
 
 ### 🚀 Features
 
 - 🔐 User Authentication — Secure login with subscription plans  
 - 💼 Asset Tracking — Add assets by type, value, and date  
 - 📊 Reports — Visualize asset distribution via interactive pie charts  
-- 🌓 Settings — Customize dark mode, theme, and profile info  
+- 🌓 Profile — Customize dark mode, theme, and profile info  
 - 📄 PDF Export — Generate downloadable financial reports  
 
-<hr style="border: 0.5px solid #ccc;"/>
+<hr style="border: 0.2px solid #ccc;"/>
 
 ### 🛠️ Tech Stack Used
 
@@ -36,7 +36,7 @@ Welcome to the **Asset Manager** project — a **subscription-based web app** bu
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="35"/>
 </p>
 
-<hr style="border: 0.5px solid #ccc;"/>
+<hr style="border: 0.2px solid #ccc;"/>
 
 ### ✍️ Usage Permission
 
@@ -45,16 +45,16 @@ This project is **view-only**. You are **not allowed** to reuse, modify, or dist
 - ❗ Unauthorized use or duplication is prohibited  
 - 📩 Reach out to request usage rights before using this project  
 
-<hr style="border: 0.5px solid #ccc;"/>
+<hr style="border: 0.2px solid #ccc;"/>
 
 ### 🧭 Quick Guide to Using the App
 
 1. Sign Up / Log In  
 2. Navigate to the **TRACK** section to add new assets  
-3. View reports under **Reports** and download PDFs  
-4. Customize preferences in **Settings**  
+3. View reports under **Reportbook** and download PDFs  
+4. Customize preferences in **Settings** and **Profile** 
 
-<hr style="border: 0.5px solid #ccc;"/>
+<hr style="border: 0.2px solid #ccc;"/>
 
 ### 🙋 Contact
 
