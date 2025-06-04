@@ -5,7 +5,7 @@ Welcome to the **Asset Manager** project — a **subscription-based web app** bu
 ### 🌐 Live Web App  
 🔗 [Asset Manager](http://assetmanager.infinityfreeapp.com/)
 
----
+<hr style="border: 0.5px solid #ccc;"/>
 
 ### 🚀 Features
 
@@ -15,19 +15,28 @@ Welcome to the **Asset Manager** project — a **subscription-based web app** bu
 - 🌓 Settings — Customize dark mode, theme, and profile info  
 - 📄 PDF Export — Generate downloadable financial reports  
 
----
+<hr style="border: 0.5px solid #ccc;"/>
 
 ### 🛠️ Tech Stack Used
 
+#### 🎨 Frontend
 <p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="35" style="margin-bottom: 6px;"/><br>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SCSS" width="35" style="margin-bottom: 6px;"/><br>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="35" style="margin-bottom: 6px;"/><br>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="35" style="margin-bottom: 6px;"/><br>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="35"/>
+</p>
+
+#### ⚙️ Backend
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="35"/>
+</p>
+
+#### 🗄️ Database
+<p align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="35"/>
 </p>
 
----
+<hr style="border: 0.5px solid #ccc;"/>
 
 ### ✍️ Usage Permission
 
@@ -36,7 +45,7 @@ This project is **view-only**. You are **not allowed** to reuse, modify, or dist
 - ❗ Unauthorized use or duplication is prohibited  
 - 📩 Reach out to request usage rights before using this project  
 
----
+<hr style="border: 0.5px solid #ccc;"/>
 
 ### 🧭 Quick Guide to Using the App
 
@@ -45,11 +54,10 @@ This project is **view-only**. You are **not allowed** to reuse, modify, or dist
 3. View reports under **Reports** and download PDFs  
 4. Customize preferences in **Settings**  
 
----
+<hr style="border: 0.5px solid #ccc;"/>
 
 ### 🙋 Contact
 
 📧 For questions or permission requests, reach out via:  
 - GitHub: [codebyhema](https://github.com/codebyhema)  
 - Email: *(hemasutar2003@gmail.com)*
-
