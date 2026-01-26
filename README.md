@@ -1,6 +1,6 @@
 # Asset Manager
 
-Welcome to the **Asset Manager** project — a **subscription-based web app** built to manually track and manage your assets. Users can add, edit, and visualize their assets, generate reports, and personalize their profile — all in one place.
+Welcome to the **Asset Manager** project — a **subscription-based web app** built to track and manage your assets. Users can add, edit, and visualize their assets, generate reports, and personalize their profile — all in one place.
 
 
 <hr style="border: 0.2px  #ccc;"/>
