@@ -15,10 +15,6 @@ Welcome to the **Asset Manager** project — a **subscription-based web app** bu
 
 <hr style="border: 0.2px solid #ccc;"/>
 
-## 🎥 Demo Video
-
-▶️ [Watch Asset Manager Demo](https://github.com/codebyhema/Asset_Manager/raw/master/asset_manager_demo-trim.mp4)
-
 
 ### 🛠️ Tech Stack Used
 
